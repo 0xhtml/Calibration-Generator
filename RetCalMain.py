@@ -10,7 +10,6 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from RetCalui import Ui_MainWindow
 import RetCalGenGcode
-from decimal import Decimal
 
 
 ui=None
@@ -30,7 +29,8 @@ def gengcode ():
 
     name = QtWidgets.QFileDialog.getSaveFileName(ui.centralwidget, 'Save Gcode', filter="(*.gcode)")
     if len(name[0])>0:
-        
+        srd = float(ui.startRetractiondistance.text())
+        ird = float(ui.incrementRetractiondistance.text())
         srs = float(ui.startRetractionspeed.text())
         irs = float(ui.incrementRetractionspeed.text())
         tsh = float(ui.tempStarthotend.text())

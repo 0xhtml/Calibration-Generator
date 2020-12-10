@@ -1,3 +1,6 @@
+from decimal import Decimal
+
+
 def genGcode(name, srd, ird, srs, irs, tsh, tih, fs, fsi, lh, ts, lt, nt, dx, dy, ps, nd, fd, em, tb, sgcode):
     file = open(name, 'w')
 
